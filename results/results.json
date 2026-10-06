@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "name": "majority class",
+    "accuracy": 0.6767676768,
+    "n_correct": 134,
+    "n_total": 198
+  },
+  "headline": {
+    "name": "ESR1 alone",
+    "accuracy": 0.8787878788,
+    "n_correct": 174,
+    "n_total": 198,
+    "margin_over_baseline_points": 20.20
+  },
+  "comparison": {
+    "name": "four-gene signature",
+    "accuracy": 0.8838383838,
+    "n_correct": 175,
+    "n_total": 198,
+    "margin_over_baseline_points": 20.71,
+    "margin_over_headline_points": 0.51
+  },
+  "esr1_removed": {
+    "name": "GATA3 + GREB1 + FOXA1 (ESR1 removed)",
+    "accuracy": 0.8434343434,
+    "n_correct": 167,
+    "n_total": 198
+  },
+  "gene_shortlist": [
+    {"gene": "ESR1", "importance_score": 1.7441, "reason": "Primary modelled gene; strongest fitted coefficient and biologically direct ER-related signal."},
+    {"gene": "GATA3", "importance_score": 0.3733, "reason": "Modelled luminal/oestrogen-programme gene with a positive fitted coefficient."},
+    {"gene": "GREB1", "importance_score": -0.1801, "reason": "Transcript-nominated oestrogen-programme gene included in the fixed signature; fitted coefficient is small and negative here."},
+    {"gene": "FOXA1", "importance_score": 0.0219, "reason": "Transcript-nominated luminal regulator included in the fixed signature; fitted coefficient is near zero here."},
+    {"gene": "TFF1", "importance_score": 1.6544, "reason": "Strong univariate standardized positive/negative group separation in this dataset; not added to the validated signature."},
+    {"gene": "TBC1D9", "importance_score": 1.9299, "reason": "Among the strongest univariate standardized separators; exploratory only."},
+    {"gene": "C9orf116", "importance_score": 1.8186, "reason": "Strong univariate standardized separation; exploratory only."},
+    {"gene": "DNALI1", "importance_score": 1.6329, "reason": "Strong univariate standardized separation; exploratory only."},
+    {"gene": "DNAJC12", "importance_score": 1.6138, "reason": "Strong univariate standardized separation; exploratory only."},
+    {"gene": "CA12", "importance_score": 1.5844, "reason": "Biologically plausible breast/luminal marker and strong univariate separator; exploratory only."},
+    {"gene": "SCUBE2", "importance_score": 1.5737, "reason": "Biologically associated with breast cancer biology and strong univariate separator; exploratory only."},
+    {"gene": "DACH1", "importance_score": 1.5753, "reason": "Strong univariate standardized separation; exploratory only."},
+    {"gene": "TFF3", "importance_score": 1.5138, "reason": "Biologically plausible epithelial/luminal marker and strong univariate separator; exploratory only."},
+    {"gene": "NAT1", "importance_score": 1.5032, "reason": "Biologically plausible breast/luminal marker and strong univariate separator; exploratory only."},
+    {"gene": "ERBB4", "importance_score": 1.3777, "reason": "Biologically relevant receptor gene with positive univariate separation; exploratory only."}
+  ],
+  "trap_check": {
+    "statistic": 8.276613,
+    "p_value": 0.081955,
+    "honest_conclusion": "Hospital and ER-status differences are not statistically distinguishable from chance at the conventional 0.05 level in this sample; JRH's 11/24 ER-positive rate remains consistent with sampling noise in a small hospital group. This does not eliminate centre-confounding risk. Hospital was excluded from all model features, and the four-gene headline was scored only with held-out cross-validation predictions."
+  },
+  "caveat": "Clinical ER status and mRNA expression measure different biological layers, and imperfect concordance could deflate the apparent margin or limit generalisation to another assay or population; this was not directly testable because independent protein measurements and exact assay details are not supplied."
+}
